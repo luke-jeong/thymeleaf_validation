@@ -17,6 +17,7 @@ import java.util.Map;
 @Slf4j
 @Controller
 @RequestMapping("/validation/v1/items")
+//requestmapping으로 기본주소를 지정한다.
 @RequiredArgsConstructor
 public class ValidationItemControllerV1 {
 
@@ -44,6 +45,7 @@ public class ValidationItemControllerV1 {
 
     @PostMapping("/add")
     public String addItem(@ModelAttribute Item item, RedirectAttributes redirectAttributes, Model model) {
+        //ModelAttribute를 통해 Item값을 넘길 수 있다.
 
         //검증 오류 결과를 보관
         Map<String, String> errors = new HashMap<>();
